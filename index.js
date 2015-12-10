@@ -269,6 +269,10 @@ toMarkdown = function (input, options) {
   }
   output = getContent(clone);
 
+  if (options.raw) {
+    return output;
+  }
+
   return output.replace(/^[\t\r\n]+|[\t\r\n\s]+$/g, '')
                .replace(/\n\s+\n/g, '\n\n')
                .replace(/\n{3,}/g, '\n\n');

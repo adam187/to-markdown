@@ -436,3 +436,9 @@ asyncTest('img[onerror]', 1, function () {
   start();
   equal(toMarkdown('>\'>"><img src=x onerror="(function () { ok(true); })()">'), '>\'>">![](x)', 'We expect img[onerror] functions not to run');
 });
+
+test('raw output', function() {
+  var html = '<h1>Hello world</h1><p>Hello world</p>';
+  var markdown = '\n\n# Hello world\n\n\n\nHello world\n\n';
+  equal(toMarkdown(html, {raw: true}), markdown);
+});

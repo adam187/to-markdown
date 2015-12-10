@@ -114,6 +114,14 @@ to-markdown has beta support for GitHub flavored markdown (GFM). Set the `gfm` o
 toMarkdown('<del>Hello world!</del>', { gfm: true });
 ```
 
+### `raw` (boolean)
+
+to-markdown will return raw output from converters (without removing extra empty lines):
+
+```js
+toMarkdown('<h1>Hello world!</h1>', { raw: true });
+```
+
 ## Methods
 
 The following methods can be called on the `toMarkdown` object.
